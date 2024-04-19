@@ -1,0 +1,24 @@
+static class Solution
+{
+    public static int solution(Tree T)
+    {
+        try
+        {
+            if (T.l is null && T.r is null)
+                return 0;
+            return 1 + (Math.Max(T.l is null ? 0 : solution(T.l), T.r is null ? 0 : solution(T.r)));
+        }
+        catch(Exception ex)
+        {
+            return -1;
+        }
+    }
+}
+
+//this is class is already provided by Codility
+class Tree
+{
+  public int x {get; set;}
+  public Tree? l {get; set;}
+  public Tree? r {get; set;}
+}
